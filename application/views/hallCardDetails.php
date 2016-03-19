@@ -15,17 +15,23 @@
                   <br>
                   <strong>Roll Number: </strong><?php echo $candidate_data['candidate_roll_number']; ?>
                   <br>
+                  <?php if ($candidate_data['candidate_aadhaar_card_number']!=""){ ?>
                   <strong>Aadhaar Card Number: </strong><?php echo $candidate_data['candidate_aadhaar_card_number']; ?>
                   <br>
+                  <?php } ?>
+                
                   <form>
                     <div class="form-group">
                         <label>Finger Print</label>
                         <input type="file" class="form-control">
                     </div>
                     <div class="form-group">
-                        <button class="btn btn-primary">Authenticate Candidate</button>
+                        <button class="btn btn-primary">Authenticate Candidate Locally</button>
                     </div>
                   </form>
+                    <?php if ($candidate_data['candidate_aadhaar_card_number']!=""){ ?>
+                      <button class="btn btn-primary">Authenticate using Aadhaar</button>
+                      <?php } ?>
               </div>
             </div>
 
