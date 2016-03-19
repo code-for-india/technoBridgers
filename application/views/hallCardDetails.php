@@ -15,9 +15,11 @@
                   <br>
                   <strong>Roll Number: </strong><?php echo $candidate_data['candidate_roll_number']; ?>
                   <br>
+                  <?php if ($candidate_data['candidate_aadhaar_card_number']!=""){ ?>
                   <strong>Aadhaar Card Number: </strong><?php echo $candidate_data['candidate_aadhaar_card_number']; ?>
                   <br>
                   <p><strong>ISO 19794-4 format fingerprint Template</strong> <?=$candidate_data['finger_print_template']?></p>
+                  <?php } ?>
                   <form>
                     <div class="form-group">
                         <label>Finger Print</label>
