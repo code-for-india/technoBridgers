@@ -57,6 +57,7 @@ class Home extends CI_Controller {
 		$candidate_name = '';
 		$candidate_roll_number = '';
 		$candidate_aadhaar_card_number = '';
+		$finger_print_template = '';
 		if ($x = $this->input->post('candidate_name')) {
 			$candidate_name = $x;
 		}
@@ -66,12 +67,13 @@ class Home extends CI_Controller {
 		if ($x = $this->input->post('candidate_aadhaar_card_number')) {
 			$candidate_aadhaar_card_number = $x;
 		}
+		$finger_print_template = ($x = $this->input->post('finger-print-template'))?$x:'';
 		$data = array(
 			'candidate_name' => $candidate_name,
 			'candidate_roll_number' => $candidate_roll_number,
-			'candidate_aadhaar_card_number' => $candidate_aadhaar_card_number
+			'candidate_aadhaar_card_number' => $candidate_aadhaar_card_number,
+			'finger_print_template' => $finger_print_template,
 			);
-
 		$qr_data = json_encode($data);
 		$res = openssl_pkey_new();
 		openssl_pkey_export($res, $privkey);
