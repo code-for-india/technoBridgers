@@ -38,8 +38,12 @@ class Home extends CI_Controller {
 			$url = $x;
 		}
 		include_once(DIR_PATH.'application/third_party/lib/QrReader.php');
-		$qrcode = new QrReader("".urldecode($url));
-		$text = $qrcode->text(); //return decoded text from QR Code
+		$text = '';
+		if($url != '')
+		{
+			$qrcode = new QrReader("".urldecode($url));
+			$text = $qrcode->text(); //return decoded text from QR Code
+		}
 		$text = str_replace(' ','+',$text);
 		$text = base64_decode($text);
 		$privkey = $this->session->userdata('privateKey');
