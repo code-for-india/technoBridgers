@@ -17,12 +17,9 @@
                 <br>
                 <?php
                 $encode_qr = urlencode($qr_code_link);
-                //$encode_qr_decoded = base64_decode($encode_qr);
-                $qr_decode_link = 'http://api.qrserver.com/v1/read-qr-code/?fileurl='.$encode_qr;
-
                 ?>
                 <form method="post" action="/home/hallCardDetails">
-                  <input type="hidden" name="url" value="<?php echo $qr_decode_link; ?>">
+                  <input type="hidden" name="url" value="<?php echo $encode_qr; ?>">
                   <input type="submit" class="btn btn-primary" value="Scan QR Code">
                 </form>
 
