@@ -24,9 +24,16 @@
                       <label>Candidate Aadhaar Card Number</label>
                       <input type="number" class="form-control" name="candidate_aadhaar_card_number" placeholder="Candidate Aadhaar Card Number">
                   </div>
-                  <div class="form-group">
-                    <label>ISO 19794-4 format fingerprint Template</label>
-                    <input type="text" class="form-control" rows="5" name="finger-print-template" value="0x239, 0x1, 0x255, 0x255, 0x255, 0x255, 0x2, 0x0, 0x130, 0x3, 0x1, 0x103, 0x12, 0x0, 0x0, 0x255, 0x254, 0x255.">
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label>ISO 19794-4 format fingerprint Template</label>
+                        <input type="text" class="form-control" rows="5" name="finger-print-template" value="0x239, 0x1, 0x255, 0x255, 0x255, 0x255, 0x2, 0x0, 0x130, 0x3, 0x1, 0x103, 0x12, 0x0, 0x0, 0x255, 0x254, 0x255.">
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <img src="http://www.identityone.net/Images/BiometricTechnology/MinutiaCapture.gif" class="img-responsive">
+                    </div>
                   </div>
                 <div class="col-md-12">
                     <div class="form-group">

@@ -42,7 +42,7 @@
                       <div class="col-sm-6">
                         <?php if(isset($candidate_data['candidate_aadhaar_card_number']) && $candidate_data['candidate_aadhaar_card_number'] != '') {?>
                         <div class="form-group">
-                            <button class="btn btn-success" onclick="return false;">Authenticate using Aadhar API</button>
+                            <a class="btn btn-success" href="http://auth.uidai.gov.in/" target="_blank">Authenticate using Aadhar API</a>
                         </div>
                         <?php } ?>
                         
